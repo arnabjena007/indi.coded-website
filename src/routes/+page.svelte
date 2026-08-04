@@ -152,6 +152,26 @@
                 </p>
             </div>
         </a>
+
+        <!-- Item 2: Where does my neta spend (Coming Soon) -->
+        <div class="experiment-card coming-soon-card">
+            <div
+                class="card-image"
+                style="background-image: url('/neta_card.jpg');"
+            >
+                <div class="coming-soon-badge">Coming Soon</div>
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="tag">Tool</span>
+                    <span class="year">Upcoming</span>
+                </div>
+                <h3>Where does my neta spend?</h3>
+                <p>
+                    Tracking MPLADS money, from sanction to site. An upcoming exploration of how public money is allocated and spent in local area development.
+                </p>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -167,7 +187,9 @@
 </section>
 
 <footer class="site-footer">
-    <div class="footer-left">indi.coded &copy; 2026</div>
+    <div class="footer-left">
+        indi.coded &copy; 2026 <span class="divider">|</span> By <a href="https://github.com/arnabjena007" target="_blank" rel="noopener noreferrer" class="author-link">arnabjena007</a>
+    </div>
     <div class="footer-right">
         <a href="/contact">Contact</a>
         <a href="/archive">Archive</a>
@@ -511,6 +533,41 @@
         margin: 0;
     }
 
+    /* COMING SOON CARD */
+    .coming-soon-card {
+        cursor: default;
+        position: relative;
+    }
+
+    .coming-soon-card .card-image {
+        position: relative;
+        filter: grayscale(0.2) contrast(0.9) brightness(0.9);
+        transition: all 0.3s ease;
+    }
+
+    .coming-soon-card:hover .card-image {
+        filter: grayscale(0) contrast(1) brightness(0.95);
+    }
+
+    .coming-soon-badge {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: rgba(62, 39, 35, 0.85);
+        color: #ffffff;
+        padding: 0.4rem 0.8rem;
+        font-family: "Inter", sans-serif;
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        border-radius: 100px;
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
     /* BENTO GRID FEATURED CARD */
     .featured-card {
         grid-column: 1 / -1; /* Span across all columns */
@@ -649,6 +706,29 @@
         font-family: "Inter", sans-serif;
         font-size: 0.85rem;
         color: rgba(62, 39, 35, 0.6);
+    }
+
+    .footer-left {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .divider {
+        color: rgba(62, 39, 35, 0.3);
+        margin: 0 0.25rem;
+    }
+
+    .author-link {
+        color: rgba(62, 39, 35, 0.8);
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+    }
+    
+    .author-link:hover {
+        color: #3e2723;
+        text-decoration: underline;
     }
 
     .footer-right {
